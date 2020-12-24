@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Self introduction">
     <meta name="author" content="Chen-Der,LI">
     <title>Welcome</title>
@@ -14,6 +14,7 @@
 </head>
 <style type="text/css">
 .navbar {
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -26,131 +27,150 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
-                <nav class="navbar navbar-expand-sm" style="background-color:#DDDDFF;">
-                    <a class="navbar-brand" style="color:#3C3C3C;" href="index.html">
-                        <img src="../lcd0417.github.io/images/llama.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                        About Me
-                    </a>
-                    <ul class="navbar-nav">
+            <!-- .navbar-expand-{sm|md|lg|xl}決定在哪個斷點以上就出現漢堡式選單 -->
+            <!-- navbar-dark 文字顏色 .bg-dark 背景顏色 -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <!-- .navbar-brand 左上LOGO位置 -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="../lcd0417.github.io/images/llama.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                    <span class="h4 mx-1">About ME！</span>
+                </a>
+                <!-- .navbar-toggler 漢堡式選單按鈕 -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- .navbar-toggler-icon 漢堡式選單Icon -->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- .collapse.navbar-collapse 用於外層中斷點群組和隱藏導覽列內容 -->
+                <!-- 選單項目&漢堡式折疊選單 -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <!-- active表示當前頁面 -->
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">A</a>
+                            <a class="nav-link" href="#">首頁<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">B</a>
+                            <a class="nav-link" href="#">關於我</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">C</a>
+                        <!-- .dropdown Navbar選項使用下拉式選單 -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">作品集</a>
+                            <!-- .dropdown-menu 下拉選單內容 -->
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">網頁設計</a>
+                                <a class="dropdown-item" href="#">平面設計</a>
+                            </div>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Disabled</a>
-                        </li> -->
                     </ul>
-                </nav>
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-8">
-                            <h3>
-                                1.個人簡介
-                            </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
-                            </p>
-                        </div>
-                        <div class="col-md-2">
-                        </div>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search
+                        </button>
+                    </form>
+                </div>
+            </nav>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-2">
                     </div>
-                    <hr class="p_bottom">
-                    <div class="row">
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-8">
-                            <h3>
-                                2.為什麼想成為工程師 ( 請以自我期許帶入：前端、後端、或全端工程師 )
-                            </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
-                            </p>
-                        </div>
-                        <div class="col-md-2">
-                        </div>
+                    <div class="col-md-8">
+                        <h3>
+                            1.個人簡介
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+                        </p>
                     </div>
-                    <hr class="p_bottom">
-                    <div class="row">
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-8">
-                            <h3>
-                                3.為了成為工程師，曾經做過什麼努力？
-                            </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
-                            </p>
-                        </div>
-                        <div class="col-md-2">
-                        </div>
+                    <div class="col-md-2">
                     </div>
-                    <hr class="p_bottom">
-                    <div class="row">
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-8">
-                            <h3>
-                                4.對於工程師的職業想像是什麼？
-                            </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
-                            </p>
-                        </div>
-                        <div class="col-md-2">
-                        </div>
+                </div>
+                <hr class="p_bottom">
+                <div class="row">
+                    <div class="col-md-2">
                     </div>
-                    <hr class="p_bottom">
-                    <div class="row">
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-8">
-                            <h3>
-                                5.如果參與這個計畫，會怎麼安排學習時間？
-                            </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
-                            </p>
-                        </div>
-                        <div class="col-md-2">
-                        </div>
+                    <div class="col-md-8">
+                        <h3>
+                            2.為什麼想成為工程師 ( 請以自我期許帶入：前端、後端、或全端工程師 )
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+                        </p>
                     </div>
-                    <hr class="p_bottom">
-                    <div class="row">
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-8">
-                            <h3>
-                                6.如果參與這個計畫，預期會碰到什麼困難？你打算怎麼解決它？
-                            </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
-                            </p>
-                        </div>
-                        <div class="col-md-2">
-                        </div>
+                    <div class="col-md-2">
                     </div>
-                    <hr class="p_bottom">
-                    <div class="row">
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-8">
-                            <h3>
-                                7.想要對我們說的事情？
-                            </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
-                            </p>
-                        </div>
-                        <div class="col-md-2">
-                        </div>
+                </div>
+                <hr class="p_bottom">
+                <div class="row">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>
+                            3.為了成為工程師，曾經做過什麼努力？
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+                <hr class="p_bottom">
+                <div class="row">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>
+                            4.對於工程師的職業想像是什麼？
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+                <hr class="p_bottom">
+                <div class="row">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>
+                            5.如果參與這個計畫，會怎麼安排學習時間？
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+                <hr class="p_bottom">
+                <div class="row">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>
+                            6.如果參與這個計畫，預期會碰到什麼困難？你打算怎麼解決它？
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+                <hr class="p_bottom">
+                <div class="row">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>
+                            7.想要對我們說的事情？
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+                        </p>
+                    </div>
+                    <div class="col-md-2">
                     </div>
                 </div>
             </div>
